@@ -29,7 +29,7 @@ function App() {
     setError(null)
 
     try {
-      const respuesta = await fetch('http://localhost:3001/api/sensores')
+      const respuesta = await fetch('http://sensorflow-dashboard.onrender.com/api/sensores')
 
       if (!respuesta.ok) {
         throw new Error('Error en la respuesta')
@@ -64,7 +64,7 @@ function App() {
     }
 
     try {
-      const respuesta = await fetch('http://localhost:3001/api/sensores', {
+      const respuesta = await fetch('http://sensorflow-dashboard.onrender.com/api/sensores', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formulario)
@@ -85,7 +85,7 @@ function App() {
     if (!confirm("¿Eliminar este sensor?")) return
 
     try {
-      await fetch(`http://localhost:3001/api/sensores/${id}`, {
+      await fetch(`http://sensorflow-dashboard.onrender.com/api/sensores/${id}`, {
         method: 'DELETE'
       })
 
