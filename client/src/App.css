@@ -1,0 +1,117 @@
+:root {
+  --bg: #1e1e1e;
+  --card: #2b2b2b;
+  --text: #ffffff;
+  --accent: #646cff;
+  --danger: #ff4444;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1f2937, #020617);
+  color: var(--text);
+}
+
+/* CONTENEDOR CENTRADO */
+.contenedor {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* HEADER CON CAJA OSCURA */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+  background: rgba(0,0,0,0.35);
+  padding: 20px;
+  border-radius: 14px;
+}
+
+/* FORMULARIO */
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.formulario input,
+.formulario select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #111827;
+  color: white;
+  flex: 1;
+  min-width: 150px;
+}
+
+.formulario button {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border: none;
+  padding: 10px 14px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* FILTROS */
+.filtros {
+  margin-bottom: 15px;
+  text-align: center;
+  background: rgba(0,0,0,0.35);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* GRID */
+.grid-sensores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* TARJETA */
+.tarjeta-sensor {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* VALOR */
+.valor {
+  font-size: 1.8rem;
+  margin: 12px 0;
+  color: #34d399;
+  font-weight: bold;
+}
+
+/* BOTON ELIMINAR */
+.btn-eliminar {
+  background: var(--danger);
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* MENSAJES */
+.error {
+  background: #ff444433;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.cargando {
+  text-align: center;
+}
