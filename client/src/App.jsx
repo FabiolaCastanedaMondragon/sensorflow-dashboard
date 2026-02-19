@@ -5,6 +5,8 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
+const API_URL = "https://sensorflow-dashboard.onrender.com"
+
 function App() {
 
   // ESTADOS REACTIVOS
@@ -29,7 +31,7 @@ function App() {
     setError(null)
 
     try {
-      const respuesta = await fetch('http://sensorflow-dashboard.onrender.com/api/sensores')
+      const respuesta = await fetch(`${API_URL}/api/sensores`)
 
       if (!respuesta.ok) {
         throw new Error('Error en la respuesta')
@@ -64,7 +66,7 @@ function App() {
     }
 
     try {
-      const respuesta = await fetch('http://sensorflow-dashboard.onrender.com/api/sensores', {
+      const respuesta = await fetch(`${API_URL}/api/sensores`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formulario)
@@ -85,7 +87,7 @@ function App() {
     if (!confirm("¿Eliminar este sensor?")) return
 
     try {
-      await fetch(`http://sensorflow-dashboard.onrender.com/api/sensores/${id}`, {
+      await fetch(`${API_URL}/api/sensores/${id}`, {
         method: 'DELETE'
       })
 
